@@ -25,6 +25,10 @@ spring:
           uri: lb://transaction-service
           predicates:
             - Path=/api/category/** , /api/transaction/**
+        - id: notification-service
+          uri: lb://notification-service
+          predicates:
+            - Path=/api/mail/**
         - id: discovery-server
           uri: http://localhost:8761
           predicates:
