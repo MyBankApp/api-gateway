@@ -44,6 +44,10 @@ spring:
           uri: lb://notification-service
           predicates:
             - Path=/api/mail/**
+        - id: deposit-service
+          uri: lb://deposit-service
+          predicates:
+            - Path=/api/deposits/** 
         - id: discovery-server
           uri: http://localhost:8761
           predicates:
